@@ -34,14 +34,14 @@ function App() {
               className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-700"
             >
               Download CV
-              <i class="ri-download-line ri-lg"></i>
+              <i className="ri-download-line ri-lg"></i>
             </a>
             <a
               href="#"
               className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-700"
             >
               Lihat Proyek
-              <i class="ri-arrow-down-line ri-lg"></i>
+              <i className="ri-arrow-down-line ri-lg"></i>
             </a>
           </div>
         </div>
@@ -155,13 +155,13 @@ function App() {
       {/* Proyek */}
 
       {/* Contact */}
-      <div className="kontak mt-32 p-10">
+      <div className="kontak mt-32 sm:p-10 p-0">
         <h1 className="text-4xl mb-2 font-bold text-center">Kontak</h1>
         <p className="text-base/loose text-center mb-10 opacity-50">
         Mari Terhubung dengan Saya
         </p>
         <form action="https://formsubmit.co/suryadarma4k@gmail.com" method="POST"
-        className="bg-zinc-800 p-10 w-fit mx-auto rounded-md" autoComplete="off">
+        className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md" autoComplete="off">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <label className="font-semibold">
