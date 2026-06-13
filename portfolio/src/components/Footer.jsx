@@ -6,21 +6,21 @@ const Footer = () => {
             Portfolio
         </h1>
         <div className="flex gap-7">
-            <a href="#">Beranda</a>
-            <a href="#">Tentang</a>
-            <a href="#">Proyek</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
         </div>
         <div className="flex items-center gap-5">
-            <a href="#">
+            <a href="https://github.com/SuryaDarma4k">
                 <i className="ri-github-fill ri-2x"></i>
             </a>
-            <a href="#">
+            {/* <a href="#">
                 <i className="ri-instagram-fill ri-2x"></i>
-            </a>
-            <a href="#">
+            </a> */}
+            <a href="https://www.linkedin.com/in/harelsuryadarma/">
                 <i className="ri-linkedin-fill ri-2x"></i>
             </a>
-            <a href="#">
+            <a href="https://wa.me/6285765932825">
                 <i className="ri-whatsapp-fill ri-2x"></i>
             </a>
         </div>

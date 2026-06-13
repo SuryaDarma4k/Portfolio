@@ -1,22 +1,20 @@
-import HeroImage from "/assets/hero-img.webp";
+import Profile from "/assets/profile.jpeg";
+import Profil from "/assets/profil.png";
 
 const Image = {
-  HeroImage,
+  Profile, Profil
 };
 
 export default Image;
 
 import Tools1 from "/assets/tools/vscode.png";
 import Tools2 from "/assets/tools/reactjs.png";
-import Tools3 from "/assets/tools/nextjs.png";
-import Tools4 from "/assets/tools/tailwind.png";
-import Tools5 from "/assets/tools/bootstrap.png";
+import Tools3 from "/assets/tools/laravel.png";
+import Tools4 from "/assets/tools/css.png";
+import Tools5 from "/assets/tools/html.png";
 import Tools6 from "/assets/tools/js.png";
-import Tools7 from "/assets/tools/nodejs.png";
+import Tools7 from "/assets/tools/phyton.png";
 import Tools8 from "/assets/tools/github.png";
-import Tools9 from "/assets/tools/ai.png";
-import Tools10 from "/assets/tools/canva.png";
-import Tools11 from "/assets/tools/figma.png";
 
 export const listTools = [
   {
@@ -36,21 +34,21 @@ export const listTools = [
   {
     id: 3,
     gambar: Tools3,
-    nama: "Next JS",
+    nama: "Laravel",
     ket: "Framework",
     dad: "300",
   },
   {
     id: 4,
     gambar: Tools4,
-    nama: "Tailwind CSS",
+    nama: "CSS",
     ket: "Framework",
     dad: "400",
   },
   {
     id: 5,
     gambar: Tools5,
-    nama: "Bootstrap",
+    nama: "Html",
     ket: "Framework",
     dad: "500",
   },
@@ -64,7 +62,7 @@ export const listTools = [
   {
     id: 7,
     gambar: Tools7,
-    nama: "Node JS",
+    nama: "Phyton",
     ket: "Javascript Runtime",
     dad: "700",
   },
@@ -74,27 +72,6 @@ export const listTools = [
     nama: "Github",
     ket: "Repository",
     dad: "800",
-  },
-  {
-    id: 9,
-    gambar: Tools9,
-    nama: "Adobe Illustrator",
-    ket: "Design App",
-    dad: "900",
-  },
-  {
-    id: 10,
-    gambar: Tools10,
-    nama: "Canva",
-    ket: "Design App",
-    dad: "1000",
-  },
-  {
-    id: 11,
-    gambar: Tools11,
-    nama: "Figma",
-    ket: "Design App",
-    dad: "1100",
   },
 ];
 
