@@ -38,6 +38,9 @@ export const Navbar = () => {
                     <a href="#projects" className="sm:text-lg text-base font-medium">Projects</a>
                 </li>
                 <li>
+                    <a href="#certificate" className="sm:text-lg text-base font-medium">Certificates</a>
+                </li>
+                <li>
                     <a href="#contact" className="sm:text-lg text-base font-medium">Contact</a>
                 </li>
             </ul>

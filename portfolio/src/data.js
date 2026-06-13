@@ -13,8 +13,16 @@ import Tools3 from "/assets/tools/laravel.png";
 import Tools4 from "/assets/tools/css.png";
 import Tools5 from "/assets/tools/html.png";
 import Tools6 from "/assets/tools/js.png";
-import Tools7 from "/assets/tools/phyton.png";
+import Tools7 from "/assets/tools/python.png";
 import Tools8 from "/assets/tools/github.png";
+import Tools9 from "/assets/tools/mysql.png";
+import Tools10 from "/assets/tools/colab.png";
+import Tools11 from "/assets/tools/filament.png";
+import Tools12 from "/assets/tools/php.png";
+import Tools13 from "/assets/tools/jupyter.png";
+import Tools14 from "/assets/tools/pandas.png";
+import Tools15 from "/assets/tools/pytorch.png";
+import Tools16 from "/assets/tools/scikitlearn.png";
 
 export const listTools = [
   {
@@ -23,6 +31,7 @@ export const listTools = [
     nama: "Visual Studio Code",
     ket: "Code Editor",
     dad: "100",
+    kategori: "tools",
   },
   {
     id: 2,
@@ -30,6 +39,7 @@ export const listTools = [
     nama: "React JS",
     ket: "Framework",
     dad: "200",
+    kategori: "web",
   },
   {
     id: 3,
@@ -37,20 +47,23 @@ export const listTools = [
     nama: "Laravel",
     ket: "Framework",
     dad: "300",
+    kategori: "web",
   },
   {
     id: 4,
     gambar: Tools4,
     nama: "CSS",
-    ket: "Framework",
+    ket: "Language",
     dad: "400",
+    kategori: "web",
   },
   {
     id: 5,
     gambar: Tools5,
     nama: "Html",
-    ket: "Framework",
+    ket: "Language",
     dad: "500",
+    kategori: "web",
   },
   {
     id: 6,
@@ -58,20 +71,87 @@ export const listTools = [
     nama: "Javascript",
     ket: "Language",
     dad: "600",
+    kategori: "web",
   },
   {
     id: 7,
     gambar: Tools7,
-    nama: "Phyton",
-    ket: "Javascript Runtime",
+    nama: "Python",
+    ket: "Language",
     dad: "700",
+    kategori: "data",
   },
   {
     id: 8,
     gambar: Tools8,
-    nama: "Github",
+    nama: "GitHub",
     ket: "Repository",
     dad: "800",
+    kategori: "tools",
+  },
+  {
+    id: 9,
+    gambar: Tools9,
+    nama: "MySql",
+    ket: "Database",
+    dad: "900",
+    kategori: "web",
+  },
+  {
+    id: 10,
+    gambar: Tools10,
+    nama: "Google Colab",
+    ket: "Code Editor",
+    dad: "1000",
+    kategori: "data",
+  },
+  {
+    id: 11,
+    gambar: Tools11,
+    nama: "Filament",
+    ket: "Framework",
+    dad: "1100",
+    kategori: "web",
+  },
+  {
+    id: 12,
+    gambar: Tools12,
+    nama: "Php",
+    ket: "Language",
+    dad: "1200",
+    kategori: "web",
+  },
+  {
+    id: 13,
+    gambar: Tools13,
+    nama: "Jupyter",
+    ket: "Code Editor",
+    dad: "1300",
+    kategori: "data",
+  },
+  {
+    id: 14,
+    gambar: Tools14,
+    nama: "Pandas",
+    ket: "Library",
+    dad: "1400",
+    kategori: "data",
+  },
+  {
+    id: 15,
+    gambar: Tools15,
+    nama: "PyTorch",
+    ket: "Library",
+    dad: "1500",
+    kategori: "data",
+  },
+  {
+    id: 16,
+    gambar: Tools16,
+    nama: "Scikit-Learn",
+    ket: "Library",
+    dad: "1600",
+    kategori: "data",
   },
 ];
 
