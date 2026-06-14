@@ -227,10 +227,10 @@ export const listProyek = [
     id: 3,
     gambar: P3_Cover,
     nama: "Personal Web Portfolio",
-    desk: "Aplikasi web portofolio interaktif dengan arsitektur komponen modular. Dirancang dengan efek Dark Glassmorphism, Responsive Hamburger Menu, dan Active State Navigation (Scroll Spy) untuk optimasi pengalaman pengguna.",
+    desk: "A modern and responsive personal portfolio website designed to showcase my projects, technical skills, certifications, and professional journey in web development and AI.",
     tools: ["React JS", "Vite", "Tailwind CSS", "AOS Animate"],
     github_link: "https://github.com/SuryaDarma4k/Portfolio", // Pastikan tautan repo GitHub Anda akurat
-    live_link: "https://harel-portfolio.vercel.app", // Ini adalah URL Vercel yang akan kita buat
+    live_link: "https://suryadarma.vercel.app/", // Ini adalah URL Vercel yang akan kita buat
     dad: "300", // Delay animasi agar muncul paling akhir
   },
   // {
