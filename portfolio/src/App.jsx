@@ -1,8 +1,9 @@
 import DataImage from "./data";
-import { listTools, listProyek } from "./data";
+import { listTools, listProyek, listSertif } from "./data";
 import FileCV from "./CV_HarelSuryaDarma.pdf";
-
+import { useState } from "react";
 function App() {
+  const [selectedSertif, setSelectedSertif] = useState(null);
   return (
     <>
       <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
@@ -326,6 +327,179 @@ function App() {
         </div>
       </div>
       {/* Proyek */}
+
+      {/* Sertifikat */}
+      {/* BLOK SERTIFIKAT & LISENSI */}
+      <div
+        className="certificates-section mt-32 w-full max-w-5xl mx-auto"
+        id="certificates"
+      >
+        {/* Header Bagian */}
+        <div className="mb-12">
+          <h2
+            className="text-4xl/snug font-bold text-white mb-4"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            Licenses & Certifications
+          </h2>
+          <p
+            className="xl:w-2/3 lg:w-3/4 md:w-full text-base/loose text-gray-400"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Continuously improving through courses and certifications in web development, AI, and software engineering.
+          </p>
+        </div>
+
+        {/* Grid Bento Sertifikat */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {listSertif.map((sertif) => (
+            <div
+              key={sertif.id}
+              // Fungsi untuk membuka pop-up saat diklik
+              onClick={() => setSelectedSertif(sertif)}
+              className="group relative flex flex-col bg-[#1A1A1A] border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/50 hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)] hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={sertif.dad}
+            >
+              {/* 1. Area Thumbnail (Gambar) */}
+              <div className="relative h-48 overflow-hidden bg-white/5 flex items-center justify-center">
+                <img
+                  src={sertif.gambar}
+                  alt={`${sertif.nama} Certificate`}
+                  className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  loading="lazy"
+                />
+
+                {/* Overlay Efek Kaca */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-all duration-300 backdrop-blur-sm">
+                  <svg
+                    className="w-10 h-10 text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                  <span className="text-white font-medium text-sm tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75">
+                    View Detail
+                  </span>
+                </div>
+
+                
+              </div>
+
+              {/* 2. Area Konten & Deskripsi */}
+              <div className="p-5 flex flex-col flex-grow">
+                {/* Label Penerbit */}
+                <p className="text-purple-400 text-xs font-bold tracking-widest uppercase mb-1">
+                  {sertif.penerbit}
+                </p>
+
+                {/* Judul Sertifikat */}
+                <h3 className="text-white font-semibold text-base leading-snug mb-4 group-hover:text-purple-300 transition-colors">
+                  {sertif.nama}
+                </h3>
+
+                {/* Mapping Skills (Pill Badges) */}
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {sertif.skills.map((skill, index) => (
+                    <span
+                      key={index}
+                      className="px-2.5 py-1 text-[11px] font-medium text-gray-300 bg-white/5 border border-white/10 rounded-md group-hover:border-purple-500/30 group-hover:bg-purple-500/10 transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* --- MODAL / POP-UP SECTION --- */}
+        {selectedSertif && (
+          <div
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-all duration-300"
+            onClick={() => setSelectedSertif(null)} // Tutup modal jika area luar diklik
+          >
+            {/* Kontainer Utama Pop-up */}
+            <div
+              className="relative w-full max-w-4xl bg-[#1A1A1A] border border-white/10 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(168,85,247,0.2)] flex flex-col max-h-[90vh] transform scale-100 transition-transform duration-300"
+              onClick={(e) => e.stopPropagation()} // Mencegah klik di dalam kontainer menutup modal
+            >
+              {/* Tombol Tutup (X) */}
+              <button
+                onClick={() => setSelectedSertif(null)}
+                className="absolute top-4 right-4 z-10 p-2.5 bg-black/50 hover:bg-red-500/80 text-white rounded-full backdrop-blur-md transition-colors"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+
+              {/* Area Gambar Utama */}
+              <div className="w-full overflow-y-auto bg-white/5 flex-grow flex flex-col items-center p-4 sm:p-8 gap-6 custom-scrollbar">
+                {selectedSertif.halaman && selectedSertif.halaman.length > 0 ? (
+                  selectedSertif.halaman.map((imgSrc, index) => (
+                    <img
+                      key={index}
+                      src={imgSrc}
+                      alt={`${selectedSertif.nama} - Page ${index + 1}`}
+                      // Menambahkan efek pembatas visual antar halaman agar rapi
+                      className="w-full h-auto object-contain rounded-lg shadow-2xl border border-white/10"
+                    />
+                  ))
+                ) : (
+                  /* Fallback: Jika Anda belum mengupdate data.js dan hanya ada properti 'gambar' */
+                  <img
+                    src={selectedSertif.gambar}
+                    alt={selectedSertif.nama}
+                    className="w-full h-auto object-contain rounded-lg shadow-2xl border border-white/10"
+                  />
+                )}
+              </div>
+
+              {/* Area Footer Pop-up (Keterangan & Tombol Aksi) */}
+              <div className="p-6 bg-[#151515] border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-1">
+                    {selectedSertif.nama}
+                  </h3>
+                  <p className="text-purple-400 text-sm font-medium tracking-wide">
+                    {selectedSertif.penerbit}
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+      {/* Sertifikat */}
 
       {/* Contact */}
       <div className="contact mt-32 sm:p-10 p-0" id="contact">

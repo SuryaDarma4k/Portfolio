@@ -212,3 +212,92 @@ export const listProyek = [
     dad: "700",
   },
 ];
+
+import Sertif1 from "/assets/certificates/BWA-Web Booking Flight Tickets.jpg";
+import Sertif2 from "/assets/certificates/BWA-RentalBarangApp.jpg";
+import Sertif3 from "/assets/certificates/AI Ethics.jpg";
+import Sertif4 from "/assets/certificates/Belajar Dasar AI.jpg";
+import Sertif4_2 from "/assets/certificates/Belajar Dasar AI_p2.jpg";
+import Sertif5 from "/assets/certificates/Belajar Dasar Cloud dan Gen AI di AWS.jpg";
+import Sertif5_2 from "/assets/certificates/Belajar Dasar Cloud dan Gen AI di AWS_p2.jpg";
+import Sertif5_3 from "/assets/certificates/Belajar Dasar Cloud dan Gen AI di AWS_p3.jpg";
+import Sertif6 from "/assets/certificates/Introduction to Artificial Intelligence.jpg";
+import Sertif7 from "/assets/certificates/Introduction to Generative AI.jpg";
+import Sertif8 from "/assets/certificates/Memulai Pemrograman dengan Python.jpg";
+import Sertif8_2 from "/assets/certificates/Memulai Pemrograman dengan Python_p2.jpg";
+import Sertif8_3 from "/assets/certificates/Memulai Pemrograman dengan Python.jpg";
+
+export const listSertif = [
+  {
+    id: 1,
+    gambar: Sertif1,
+    halaman: [Sertif1],
+    nama: "Web Booking Flight Tickets",
+    penerbit: "BuildWithAngga",
+    skills: ["Laravel 11", "Filament"],
+    dad: "100",
+  },
+  {
+    id: 2,
+    gambar: Sertif2,
+    nama: "Web Dev: Sewa Barang App",
+    halaman: [Sertif2],
+    penerbit: "BuildWithAngga",
+    skills: ["Laravel 11", "Filament", "MySQL"],
+    dad: "200",
+  },
+  {
+    id: 3,
+    gambar: Sertif8, // Saya letakkan Python di atas karena jam belajarnya sangat masif (60 Jam)
+    nama: "Memulai Pemrograman dengan Python",
+    halaman: [Sertif8, Sertif8_2, Sertif8_3],
+    penerbit: "Dicoding Academy",
+    skills: ["Python", "Jupyter", "Google Colab"],
+    dad: "300",
+  },
+  {
+    id: 4,
+    gambar: Sertif4,
+    nama: "Belajar Dasar AI",
+    halaman: [Sertif4, Sertif4_2],
+    penerbit: "Dicoding Academy",
+    skills: ["Machine Learning", "Deep Learning"],
+    dad: "400",
+  },
+  {
+    id: 5,
+    gambar: Sertif5,
+    nama: "Dasar Cloud & Gen AI di AWS",
+    halaman: [Sertif5, Sertif5_2, Sertif5_3],
+    penerbit: "Dicoding Academy",
+    skills: ["AWS Cloud", "Generative AI", "Networking"],
+    dad: "500",
+  },
+  {
+    id: 6,
+    gambar: Sertif7, 
+    nama: "Introduction to Generative AI",
+    halaman: [Sertif7],
+    penerbit: "IBM SkillsBuild",
+    skills: ["Generative AI", "LLM"],
+    dad: "600",
+  },
+  {
+    id: 7,
+    gambar: Sertif6,
+    nama: "Introduction to Artificial Intelligence",
+    halaman: [Sertif6],
+    penerbit: "IBM SkillsBuild",
+    skills: ["Artificial Intelligence"],
+    dad: "700",
+  },
+  {
+    id: 8,
+    gambar: Sertif3,
+    halaman: [Sertif3],
+    nama: "AI Ethics",
+    penerbit: "IBM SkillsBuild",
+    skills: ["AI Ethics", "Compliance"],
+    dad: "800",
+  },
+];
