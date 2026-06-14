@@ -1,8 +1,7 @@
-import Profile from "/assets/profile.jpeg";
 import Profil from "/assets/profil.png";
 
 const Image = {
-  Profile, Profil
+  Profil
 };
 
 export default Image;
@@ -23,6 +22,8 @@ import Tools13 from "/assets/tools/jupyter.png";
 import Tools14 from "/assets/tools/pandas.png";
 import Tools15 from "/assets/tools/pytorch.png";
 import Tools16 from "/assets/tools/scikitlearn.png";
+import Tools17 from "/assets/tools/midtrans.png";
+import Tools18 from "/assets/tools/tailwind.png";
 
 export const listTools = [
   {
@@ -153,64 +154,109 @@ export const listTools = [
     dad: "1600",
     kategori: "data",
   },
+  {
+    id: 17,
+    gambar: Tools17,
+    nama: "Midtrans",
+    ket: "Library",
+    dad: "1700",
+    kategori: "web",
+  },
+  {
+    id: 18,
+    gambar: Tools18,
+    nama: "Tailwind CSS",
+    ket: "Library",
+    dad: "1800",
+    kategori: "web",
+  },
 ];
 
-import Proyek1 from "/assets/proyek/proyek1.webp";
-import Proyek2 from "/assets/proyek/proyek2.webp";
-import Proyek3 from "/assets/proyek/proyek3.webp";
-import Proyek4 from "/assets/proyek/proyek4.webp";
-import Proyek5 from "/assets/proyek/proyek5.webp";
-import Proyek6 from "/assets/proyek/proyek6.webp";
+import P1_Cover from "/assets/proyek/proyek1.png";
+import P1_Search from "/assets/proyek/proyek1_2.png";
+import P1_Class from "/assets/proyek/proyek1_3.png";
+import P1_Seat from "/assets/proyek/proyek1_4.png";
+import P1_Pass1 from "/assets/proyek/proyek1_5.png";
+import P1_Pass2 from "/assets/proyek/proyek1_6.png";
+import P1_Payment from "/assets/proyek/proyek1_7.png";
+import P2_Cover from "/assets/proyek/proyek2.png";
+import P2_Detail from "/assets/proyek/proyek2_4.png"; 
+import P2_Booking from "/assets/proyek/proyek2_6.png"; 
+import P2_Checkout from "/assets/proyek/proyek2_7.png"; 
+import P2_Payment from "/assets/proyek/proyek2_8.png"; 
+import P2_Status from "/assets/proyek/proyek2_10.png";
+import P3_Cover from "/assets/proyek/proyek3.png";
 
 export const listProyek = [
   {
     id: 1,
-    gambar: Proyek1,
-    nama: "Website Sekolah",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS"],
-    dad: "200",
+    gambar: P1_Cover, // Gambar yang muncul di grid luar
+    gallery: [
+      P1_Cover, 
+      P1_Search, 
+      P1_Class, 
+      P1_Seat, 
+      P1_Pass1, 
+      P1_Pass2, 
+      P1_Payment
+    ], // Array gambar yang akan di-looping di dalam Smart Modal
+    nama: "Garuda Flight Booking System",
+    desk: "A flight reservation system with real-time seat selection and flight class management. Integrates Livewire for dynamic, refresh-free interactions and Filament for the admin dashboard.",
+    tools: ["Laravel", "Livewire", "Filament", "Midtrans API"],
+    github_link: "https://github.com/SuryaDarma4k/garudafligh", 
+    dad: "100",
   },
   {
     id: 2,
-    gambar: Proyek2,
-    nama: "Company Profile",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
-    dad: "300",
+    gambar: P2_Cover,
+    gallery: [
+      P2_Cover,
+      P2_Detail,
+      P2_Booking,
+      P2_Checkout,
+      P2_Payment,
+      P2_Status
+    ],
+    nama: "Sewa Rental Platform",
+    desk: "A mobile-first rental platform optimized for mobile devices. Built with an MVC architecture using Laravel 12 and Tailwind CSS to ensure efficient data processing.",
+    tools: ["Laravel 12", "PHP", "Tailwind CSS", "MySQL"],
+    github_link: "https://github.com/SuryaDarma4k/SewaBarang",
+    dad: "200", 
   },
   {
     id: 3,
-    gambar: Proyek3,
-    nama: "Web Pernikahan 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
-    dad: "400",
+    gambar: P3_Cover,
+    nama: "Personal Web Portfolio",
+    desk: "Aplikasi web portofolio interaktif dengan arsitektur komponen modular. Dirancang dengan efek Dark Glassmorphism, Responsive Hamburger Menu, dan Active State Navigation (Scroll Spy) untuk optimasi pengalaman pengguna.",
+    tools: ["React JS", "Vite", "Tailwind CSS", "AOS Animate"],
+    github_link: "https://github.com/SuryaDarma4k/Portfolio", // Pastikan tautan repo GitHub Anda akurat
+    live_link: "https://harel-portfolio.vercel.app", // Ini adalah URL Vercel yang akan kita buat
+    dad: "300", // Delay animasi agar muncul paling akhir
   },
-  {
-    id: 4,
-    gambar: Proyek4,
-    nama: "Website Course",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "Bootstrap", "AOS"],
-    dad: "500",
-  },
-  {
-    id: 5,
-    gambar: Proyek5,
-    nama: "Web Portfolio",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "Bootsrap"],
-    dad: "600",
-  },
-  {
-    id: 6,
-    gambar: Proyek6,
-    nama: "Company Profile 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["NextJS", "TailwindCSS", "Framermotion"],
-    dad: "700",
-  },
+  // {
+  //   id: 4,
+  //   gambar: Proyek4,
+  //   nama: "Website Course",
+  //   desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
+  //   tools: ["Vite", "ReactJS", "Bootstrap", "AOS"],
+  //   dad: "500",
+  // },
+  // {
+  //   id: 5,
+  //   gambar: Proyek5,
+  //   nama: "Web Portfolio",
+  //   desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
+  //   tools: ["HTML", "CSS", "Javascript", "Bootsrap"],
+  //   dad: "600",
+  // },
+  // {
+  //   id: 6,
+  //   gambar: Proyek6,
+  //   nama: "Company Profile 2.0",
+  //   desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
+  //   tools: ["NextJS", "TailwindCSS", "Framermotion"],
+  //   dad: "700",
+  // },
 ];
 
 import Sertif1 from "/assets/certificates/BWA-Web Booking Flight Tickets.jpg";
