@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       {/* 1. HERO SECTION */}
-      <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1 w-full max-w-7xl mx-auto px-6 lg:px-8">
+      <div id="home" className="hero grid md:grid-cols-2 items-center pt-28 xl:gap-0 gap-6 grid-cols-1 w-full max-w-7xl mx-auto px-6 lg:px-8">
         <div className="animate__animated animate__fadeInUp animate__delay-2s">
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
             <p className="font-medium text-gray-200 tracking-wide">Web Developer • AI & NLP Enthusiast</p>
@@ -93,9 +93,10 @@ function App() {
           />
         </div>
       </div>
+      {/* 1. HERO SECTION */}
 
       {/* 2. ABOUT SECTION */}
-      <div className="about mt-32 w-full max-w-7xl mx-auto px-6 lg:px-8" id="about">
+      <div className="about pt-28 mt-32 w-full max-w-7xl mx-auto px-6 lg:px-8" id="about">
         <div
           className="w-full p-8 md:p-12 bg-[#1A1A1A] border border-white/10 rounded-2xl"
           data-aos="fade-up"
@@ -125,6 +126,7 @@ function App() {
           </div>
         </div>
       </div>
+      {/* 2. ABOUT SECTION */}
 
       {/* 3. TECH STACK & TOOLS */}
       <div className="tools mt-32 w-full max-w-7xl mx-auto px-6 lg:px-8">
@@ -207,9 +209,10 @@ function App() {
           </div>
         </div>
       </div>
+      {/* 3. TECH STACK & TOOLS */}
 
       {/* 4. PROJECTS SECTION */}
-      <div className="projects mt-32 w-full max-w-7xl mx-auto px-6 lg:px-8" id="projects">
+      <div className="projects pt-28 mt-32 w-full max-w-7xl mx-auto px-6 lg:px-8" id="projects">
         <div className="mb-12 text-left">
           <h2 className="text-4xl font-bold mb-4 text-white" data-aos="fade-up" data-aos-duration="1000">
             Projects
@@ -256,7 +259,7 @@ function App() {
       </div>
 
       {/* 5. CERTIFICATIONS SECTION */}
-      <div className="certificates-section mt-32 w-full max-w-7xl mx-auto px-6 lg:px-8" id="certificate">
+      <div className="certificates-section pt-28 mt-32 w-full max-w-7xl mx-auto px-6 lg:px-8" id="certificate">
         <div className="mb-12">
           <h2 className="text-4xl/snug font-bold text-white mb-4" data-aos="fade-up">
             Licenses & Certifications
@@ -355,7 +358,7 @@ function App() {
       </div>
 
       {/* 6. CONTACT SECTION */}
-      <div className="contact mt-32 mb-20 w-full max-w-7xl mx-auto px-6 lg:px-8" id="contact">
+      <div className="contact pt-28 mt-32 mb-20 w-full max-w-7xl mx-auto px-6 lg:px-8" id="contact">
         <div className="mb-12 text-left">
           <h2 className="text-4xl font-bold text-white mb-4" data-aos="fade-up" data-aos-duration="1000">
             Contact
