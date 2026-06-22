@@ -86,7 +86,8 @@ function App() {
             loading="lazy"
             className="
             relative
-            w-full
+            w-11/12
+            md:w-full
             max-w-[460px]
             mx-auto md:mx-0
             rounded-[28px]
