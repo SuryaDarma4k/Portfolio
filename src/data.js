@@ -31,7 +31,7 @@ export const listTools = [
     gambar: Tools1,
     nama: "Visual Studio Code",
     ket: "Code Editor",
-    dad: "100",
+    dad: "1500",
     kategori: "tools",
   },
   {
@@ -39,7 +39,7 @@ export const listTools = [
     gambar: Tools2,
     nama: "React JS",
     ket: "Framework",
-    dad: "200",
+    dad: "100",
     kategori: "web",
   },
   {
@@ -47,7 +47,7 @@ export const listTools = [
     gambar: Tools3,
     nama: "Laravel",
     ket: "Framework",
-    dad: "300",
+    dad: "200",
     kategori: "web",
   },
   {
@@ -55,7 +55,7 @@ export const listTools = [
     gambar: Tools4,
     nama: "CSS",
     ket: "Language",
-    dad: "400",
+    dad: "300",
     kategori: "web",
   },
   {
@@ -63,7 +63,7 @@ export const listTools = [
     gambar: Tools5,
     nama: "Html",
     ket: "Language",
-    dad: "500",
+    dad: "400",
     kategori: "web",
   },
   {
@@ -71,7 +71,7 @@ export const listTools = [
     gambar: Tools6,
     nama: "Javascript",
     ket: "Language",
-    dad: "600",
+    dad: "500",
     kategori: "web",
   },
   {
@@ -79,7 +79,7 @@ export const listTools = [
     gambar: Tools7,
     nama: "Python",
     ket: "Language",
-    dad: "700",
+    dad: "1100",
     kategori: "data",
   },
   {
@@ -87,7 +87,7 @@ export const listTools = [
     gambar: Tools8,
     nama: "GitHub",
     ket: "Repository",
-    dad: "800",
+    dad: "1800",
     kategori: "tools",
   },
   {
@@ -95,7 +95,7 @@ export const listTools = [
     gambar: Tools9,
     nama: "MySql",
     ket: "Database",
-    dad: "900",
+    dad: "600",
     kategori: "web",
   },
   {
@@ -103,15 +103,15 @@ export const listTools = [
     gambar: Tools10,
     nama: "Google Colab",
     ket: "Code Editor",
-    dad: "1000",
-    kategori: "data",
+    dad: "1700",
+    kategori: "tools",
   },
   {
     id: 11,
     gambar: Tools11,
     nama: "Filament",
     ket: "Framework",
-    dad: "1100",
+    dad: "700",
     kategori: "web",
   },
   {
@@ -119,7 +119,7 @@ export const listTools = [
     gambar: Tools12,
     nama: "Php",
     ket: "Language",
-    dad: "1200",
+    dad: "800",
     kategori: "web",
   },
   {
@@ -127,15 +127,15 @@ export const listTools = [
     gambar: Tools13,
     nama: "Jupyter",
     ket: "Code Editor",
-    dad: "1300",
-    kategori: "data",
+    dad: "1800",
+    kategori: "tools",
   },
   {
     id: 14,
     gambar: Tools14,
     nama: "Pandas",
     ket: "Library",
-    dad: "1400",
+    dad: "1200",
     kategori: "data",
   },
   {
@@ -143,7 +143,7 @@ export const listTools = [
     gambar: Tools15,
     nama: "PyTorch",
     ket: "Library",
-    dad: "1500",
+    dad: "1300",
     kategori: "data",
   },
   {
@@ -151,7 +151,7 @@ export const listTools = [
     gambar: Tools16,
     nama: "Scikit-Learn",
     ket: "Library",
-    dad: "1600",
+    dad: "1400",
     kategori: "data",
   },
   {
@@ -159,7 +159,7 @@ export const listTools = [
     gambar: Tools17,
     nama: "Midtrans",
     ket: "Library",
-    dad: "1700",
+    dad: "900",
     kategori: "web",
   },
   {
@@ -167,7 +167,7 @@ export const listTools = [
     gambar: Tools18,
     nama: "Tailwind CSS",
     ket: "Library",
-    dad: "1800",
+    dad: "1000",
     kategori: "web",
   },
 ];
