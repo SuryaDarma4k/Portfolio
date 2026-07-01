@@ -32,192 +32,194 @@ export const Navbar = () => {
             setActiveSection(current);
         };
 
+        handleScroll();
+
         window.addEventListener("scroll", handleScroll);
 
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const getLinkClass = (sectionName) => {
-        return `font-medium transition-all duration-300 ${
+        return `transition-all duration-300 font-medium ${
             activeSection === sectionName
-                ? "text-purple-400 drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]"
+                ? "text-purple-400"
                 : "text-gray-300 hover:text-white"
         }`;
     };
 
     return (
-        <nav
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-            ${
-                active
-                    ? "py-3 md:py-4 bg-[#121212]/90 backdrop-blur-md border-b border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
-                    : "py-4 md:py-5 lg:py-6 bg-transparent"
-            }`}
-        >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <>
+            <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+                <div
+                    className={`rounded-2xl transition-all duration-300 ${
+                        active
+                            ? "bg-[#121212]/90 backdrop-blur-xl border border-white/10 shadow-xl"
+                            : "bg-[#121212]/60 backdrop-blur-xl border border-white/5"
+                    }`}
+                >
+                    <div className="flex items-center justify-between px-5 md:px-8 py-3">
 
-                {/* Logo */}
-                <div className="logo">
-                    <a
-                        href="#home"
-                        className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide text-white"
-                    >
-                        Portfolio
-                    </a>
-                </div>
-
-                {/* Desktop Menu */}
-                <ul className="hidden md:flex items-center gap-6 lg:gap-10">
-                    <li>
+                        {/* Logo */}
                         <a
                             href="#home"
-                            className={`text-base lg:text-lg ${getLinkClass("home")}`}
+                            className="text-xl md:text-2xl font-bold text-white"
                         >
-                            Home
+                            Portfolio
                         </a>
-                    </li>
 
-                    <li>
-                        <a
-                            href="#about"
-                            className={`text-base lg:text-lg ${getLinkClass("about")}`}
+                        {/* Desktop Menu */}
+                        <ul className="hidden md:flex items-center gap-8 lg:gap-10">
+
+                            <li>
+                                <a
+                                    href="#home"
+                                    className={`text-base ${getLinkClass("home")}`}
+                                >
+                                    Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#about"
+                                    className={`text-base ${getLinkClass("about")}`}
+                                >
+                                    About
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#projects"
+                                    className={`text-base ${getLinkClass("projects")}`}
+                                >
+                                    Projects
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#certificate"
+                                    className={`text-base ${getLinkClass(
+                                        "certificate"
+                                    )}`}
+                                >
+                                    Certificates
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#contact"
+                                    className={`text-base ${getLinkClass("contact")}`}
+                                >
+                                    Contact
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        {/* Mobile Button */}
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="md:hidden text-white p-2 rounded-lg bg-white/5 border border-white/10"
                         >
-                            About
-                        </a>
-                    </li>
+                            {isMenuOpen ? (
+                                <svg
+                                    className="w-6 h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            ) : (
+                                <svg
+                                    className="w-6 h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M4 6h16M4 12h16M4 18h16"
+                                    />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
 
-                    <li>
-                        <a
-                            href="#projects"
-                            className={`text-base lg:text-lg ${getLinkClass("projects")}`}
-                        >
-                            Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="#certificate"
-                            className={`text-base lg:text-lg ${getLinkClass("certificate")}`}
-                        >
-                            Certificates
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="#contact"
-                            className={`text-base lg:text-lg ${getLinkClass("contact")}`}
-                        >
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-
-                {/* Hamburger */}
-                <div className="md:hidden">
-                    <button
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="flex items-center justify-center p-2 rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:text-white transition-colors"
-                        aria-label="Toggle Menu"
+                    {/* Mobile Menu */}
+                    <div
+                        className={`md:hidden overflow-hidden transition-all duration-300 ${
+                            isMenuOpen
+                                ? "max-h-96 opacity-100"
+                                : "max-h-0 opacity-0"
+                        }`}
                     >
-                        {isMenuOpen ? (
-                            <svg
-                                className="w-6 h-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M6 18L18 6M6 6l12 12"
-                                />
-                            </svg>
-                        ) : (
-                            <svg
-                                className="w-6 h-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h16M4 18h16"
-                                />
-                            </svg>
-                        )}
-                    </button>
+                        <ul className="px-5 pb-5 flex flex-col gap-4">
+
+                            <li>
+                                <a
+                                    href="#home"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className={getLinkClass("home")}
+                                >
+                                    Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#about"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className={getLinkClass("about")}
+                                >
+                                    About
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#projects"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className={getLinkClass("projects")}
+                                >
+                                    Projects
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#certificate"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className={getLinkClass("certificate")}
+                                >
+                                    Certificates
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#contact"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className={getLinkClass("contact")}
+                                >
+                                    Contact
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            {/* Mobile Menu */}
-            <div
-                className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                }`}
-            >
-                <div className="bg-[#1A1A1A]/95 backdrop-blur-lg border-t border-white/10">
-                    <ul className="flex flex-col px-5 py-5 gap-4">
-
-                        <li>
-                            <a
-                                href="#home"
-                                onClick={() => setIsMenuOpen(false)}
-                                className={`block text-base ${getLinkClass("home")}`}
-                            >
-                                Home
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#about"
-                                onClick={() => setIsMenuOpen(false)}
-                                className={`block text-base ${getLinkClass("about")}`}
-                            >
-                                About
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#projects"
-                                onClick={() => setIsMenuOpen(false)}
-                                className={`block text-base ${getLinkClass("projects")}`}
-                            >
-                                Projects
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#certificate"
-                                onClick={() => setIsMenuOpen(false)}
-                                className={`block text-base ${getLinkClass("certificate")}`}
-                            >
-                                Certificates
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#contact"
-                                onClick={() => setIsMenuOpen(false)}
-                                className={`block text-base ${getLinkClass("contact")}`}
-                            >
-                                Contact
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </>
     );
 };
