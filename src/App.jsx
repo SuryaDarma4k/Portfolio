@@ -14,7 +14,8 @@ function App() {
       {/* 1. HERO SECTION */}
       <div
         id="home"
-        className="hero grid grid-cols-1 md:grid-cols-2 items-center min-h-screen pt-32 md:pt-28 gap-10 xl:gap-0 w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        className="hero grid grid-cols-1 md:grid-cols-2 items-center min-h-screen pt-32 md:pt-28 gap-10 xl:gap-0 w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8"
+      >
         {/* LEFT */}
         <div className="animate__animated animate__fadeInUp animate__delay-2s">
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
@@ -548,10 +549,10 @@ function App() {
             >
               <div className="absolute inset-0 w-0 bg-purple-500/20 group-hover:w-full transition-all duration-500 ease-out"></div>
               <span className="relative text-white font-medium text-sm tracking-wide flex items-center gap-2">
-                {showAll ? 'Show Less' : 'View All Certifications'}
+                {showAll ? "Show Less" : "View All Certifications"}
                 <svg
                   className={`w-4 h-4 transition-transform duration-300 ${
-                    showAll ? 'rotate-180' : ''
+                    showAll ? "rotate-180" : ""
                   }`}
                   fill="none"
                   stroke="currentColor"
@@ -631,161 +632,139 @@ function App() {
       </div>
 
       {/* 6. CONTACT SECTION */}
-      <div
-        className="contact pt-28 mt-32 mb-20 w-full max-w-7xl mx-auto px-6 lg:px-8"
-        id="contact"
-      >
-        {/* Arsitektur Grid Dua Kolom untuk Desktop, memanjang ke bawah untuk Mobile */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* KOLOM KIRI: Teks & Kartu Informasi Kontak */}
-          <div data-aos="fade-right" data-aos-duration="1000">
-            <div className="mb-10 text-left">
-              <h2 className="text-4xl font-bold text-white mb-4">Contact</h2>
-              <p className="text-base/loose text-gray-400">
+      {/* 6. CONTACT SECTION */}
+      <section id="contact" className="pt-24 md:pt-28 mt-24 md:mt-32 mb-20">
+        <div className="w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+            {/* LEFT */}
+            <div data-aos="fade-right">
+              <h2 className="text-4xl font-bold mb-4">Contact</h2>
+
+              <p className="text-gray-400 leading-8 mb-10">
                 Let's Connect. Feel free to reach out for internship
                 opportunities, collaborations, or technology discussions.
               </p>
+
+              <div className="space-y-4">
+                <a
+                  href="mailto:suryadarma4k@gmail.com"
+                  className="flex items-center gap-5 p-5 rounded-2xl border border-white/10 bg-[#1A1A1A] hover:border-purple-500/40 transition"
+                >
+                  <div className="w-12 h-12 rounded-full bg-purple-600/20 flex items-center justify-center text-purple-400 shrink-0">
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold">Email</h3>
+                    <p className="text-gray-400 break-all">
+                      suryadarma4k@gmail.com
+                    </p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://wa.me/6285765932825"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-5 p-5 rounded-2xl border border-white/10 bg-[#1A1A1A] hover:border-purple-500/40 transition"
+                >
+                  <div className="w-12 h-12 rounded-full bg-purple-600/20 flex items-center justify-center text-purple-400 shrink-0">
+                    <i className="ri-whatsapp-fill ri-xl"></i>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold">WhatsApp</h3>
+                    <p className="text-gray-400">+62 857-6593-2825</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/harelsuryadarma/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-5 p-5 rounded-2xl border border-white/10 bg-[#1A1A1A] hover:border-purple-500/40 transition"
+                >
+                  <div className="w-12 h-12 rounded-full bg-purple-600/20 flex items-center justify-center text-purple-400 shrink-0">
+                    <i className="ri-linkedin-fill ri-xl"></i>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold">LinkedIn</h3>
+                    <p className="text-gray-400">Harel Surya Darma</p>
+                  </div>
+                </a>
+              </div>
             </div>
 
-            {/* Kartu Informasi Kontak (Email, WhatsApp, LinkedIn) */}
-            <div className="flex flex-col gap-4">
-              {/* Kartu Email */}
-              <a
-                href="mailto:suryadarma4k@gmail.com"
-                className="bg-[#1A1A1A] border border-white/10 p-5 rounded-2xl flex items-center gap-5 hover:border-purple-500/50 hover:bg-white/5 transition-all duration-300 group"
+            {/* RIGHT */}
+            <div data-aos="fade-left">
+              <form
+                action="https://formsubmit.co/suryadarma4k@gmail.com"
+                method="POST"
+                autoComplete="off"
+                className="bg-[#1A1A1A] border border-white/10 rounded-2xl p-6 md:p-8"
               >
-                <div className="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                <div className="space-y-5">
+                  <div>
+                    <label className="block mb-2 font-medium">Full Name</label>
+
+                    <input
+                      type="text"
+                      name="nama"
+                      required
+                      placeholder="Enter Your Name"
+                      className="w-full rounded-lg bg-white/5 border border-white/10 p-3 focus:border-purple-500 outline-none"
                     />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-white mb-0.5">
-                    Email
-                  </p>
-                  <p className="text-sm text-gray-400">
-                    suryadarma4k@gmail.com
-                  </p>
-                </div>
-              </a>
+                  </div>
 
-              {/* Kartu WhatsApp */}
-              <a
-                href="https://wa.me/6285765932825"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#1A1A1A] border border-white/10 p-5 rounded-2xl flex items-center gap-5 hover:border-purple-500/50 hover:bg-white/5 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                  <i className="ri-whatsapp-fill ri-2x"></i>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-white mb-0.5">
-                    WhatsApp
-                  </p>
-                  <p className="text-sm text-gray-400">+62 857-6593-2825</p>
-                </div>
-              </a>
+                  <div>
+                    <label className="block mb-2 font-medium">Email</label>
 
-              {/* Kartu LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/harelsuryadarma/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#1A1A1A] border border-white/10 p-5 rounded-2xl flex items-center gap-5 hover:border-purple-500/50 hover:bg-white/5 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                  <svg
-                    className="w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-white mb-0.5">
-                    LinkedIn
-                  </p>
-                  <p className="text-sm text-gray-400">Harel Surya Darma</p>
-                </div>
-              </a>
-            </div>
-          </div>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="john@example.com"
+                      className="w-full rounded-lg bg-white/5 border border-white/10 p-3 focus:border-purple-500 outline-none"
+                    />
+                  </div>
 
-          {/* KOLOM KANAN: Formulir Kontak */}
-          <div data-aos="fade-left" data-aos-delay="200">
-            <form
-              action="https://formsubmit.co/suryadarma4k@gmail.com"
-              method="POST"
-              className="bg-[#1A1A1A] border border-white/10 p-8 md:p-10 w-full rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.3)]"
-              autoComplete="off"
-            >
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-col gap-2">
-                  <label className="font-semibold text-gray-300 text-sm">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    name="nama"
-                    placeholder="Enter Your Name"
-                    className="bg-white/5 border border-white/10 p-3.5 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-gray-600"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="font-semibold text-gray-300 text-sm">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="john@example.com"
-                    className="bg-white/5 border border-white/10 p-3.5 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-gray-600"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="pesan"
-                    className="font-semibold text-gray-300 text-sm"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    name="pesan"
-                    id="pesan"
-                    cols="45"
-                    rows="5"
-                    placeholder="Write your message here..."
-                    className="bg-white/5 border border-white/10 p-3.5 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all resize-y placeholder:text-gray-600"
-                    required
-                  ></textarea>
-                </div>
-                <div className="mt-2">
+                  <div>
+                    <label className="block mb-2 font-medium">Message</label>
+
+                    <textarea
+                      name="pesan"
+                      rows="6"
+                      required
+                      placeholder="Write your message here..."
+                      className="w-full rounded-lg bg-white/5 border border-white/10 p-3 resize-none focus:border-purple-500 outline-none"
+                    ></textarea>
+                  </div>
+
                   <button
                     type="submit"
-                    className="bg-violet-700 hover:bg-violet-600 text-white font-semibold p-3.5 rounded-lg w-full transition-all duration-300 shadow-lg hover:shadow-violet-700/30 hover:-translate-y-1"
+                    className="w-full bg-violet-700 hover:bg-violet-600 rounded-lg py-3 font-semibold transition"
                   >
                     Kirim Pesan
                   </button>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
       {/* 6. CONTACT SECTION */}
 
       {/* --- SMART MODAL / POP-UP GALLERY PROYEK --- */}
