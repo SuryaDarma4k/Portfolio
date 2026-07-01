@@ -87,7 +87,7 @@ export const listTools = [
     gambar: Tools8,
     nama: "GitHub",
     ket: "Repository",
-    dad: "1800",
+    dad: "1600",
     kategori: "tools",
   },
   {
