@@ -272,6 +272,9 @@ import Sertif7 from "/assets/certificates/Introduction to Generative AI.jpg";
 import Sertif8 from "/assets/certificates/Memulai Pemrograman dengan Python.jpg";
 import Sertif8_2 from "/assets/certificates/Memulai Pemrograman dengan Python_p2.jpg";
 import Sertif8_3 from "/assets/certificates/Memulai Pemrograman dengan Python.jpg";
+import Sertif9 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0001.jpg"
+import Sertif9_2 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0002.jpg"
+import Sertif9_3 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0003.jpg"
 
 export const listSertif = [
   {
@@ -345,5 +348,14 @@ export const listSertif = [
     penerbit: "IBM SkillsBuild",
     skills: ["AI Ethics", "Compliance"],
     dad: "800",
+  },
+  {
+    id: 9,
+    gambar: Sertif9,
+    halaman: [Sertif9, Sertif9_2, Sertif9_3],
+    nama: "Spec Driven Development dengan Kiro",
+    penerbit: "DiCoding",
+    skills: ["Prompt Engineering", "Web Development", "Spec-Driven Development (SDD)"],
+    dad: "900",
   },
 ];

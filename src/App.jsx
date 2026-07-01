@@ -6,6 +6,8 @@ import { useState } from "react";
 function App() {
   const [selectedSertif, setSelectedSertif] = useState(null);
   const [selectedProyek, setSelectedProyek] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+  const displayedSertif = showAll ? listSertif : listSertif.slice(0, 8);
 
   return (
     <>
@@ -473,8 +475,9 @@ function App() {
           </p>
         </div>
 
+        {/* UBAH: Gunakan displayedSertif bukan listSertif */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {listSertif.map((sertif) => (
+          {displayedSertif.map((sertif) => (
             <div
               key={sertif.id}
               onClick={() => setSelectedSertif(sertif)}
@@ -535,6 +538,36 @@ function App() {
             </div>
           ))}
         </div>
+
+        {/* TAMBAHAN: Tombol Show More / Show Less */}
+        {listSertif.length > 8 && (
+          <div className="mt-12 flex justify-center" data-aos="fade-up">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="group relative px-8 py-3 bg-transparent overflow-hidden rounded-full border border-purple-500/50 hover:border-purple-400 transition-all duration-300"
+            >
+              <div className="absolute inset-0 w-0 bg-purple-500/20 group-hover:w-full transition-all duration-500 ease-out"></div>
+              <span className="relative text-white font-medium text-sm tracking-wide flex items-center gap-2">
+                {showAll ? 'Show Less' : 'View All Certifications'}
+                <svg
+                  className={`w-4 h-4 transition-transform duration-300 ${
+                    showAll ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        )}
 
         {/* MODAL POP-UP */}
         {selectedSertif && (
