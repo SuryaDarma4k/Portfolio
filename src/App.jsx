@@ -12,52 +12,73 @@ function App() {
       {/* 1. HERO SECTION */}
       <div
         id="home"
-        className="hero grid md:grid-cols-2 items-center pt-28 xl:gap-0 gap-6 grid-cols-1 w-full max-w-7xl mx-auto px-6 lg:px-8"
-      >
+        className="hero grid grid-cols-1 md:grid-cols-2 items-center min-h-screen pt-32 md:pt-28 gap-10 xl:gap-0 w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        {/* LEFT */}
         <div className="animate__animated animate__fadeInUp animate__delay-2s">
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
-            <p className="font-medium text-gray-200 tracking-wide">
+            <p className="font-medium text-gray-200 tracking-wide text-sm sm:text-base">
               Web Developer • AI & NLP Enthusiast
             </p>
           </div>
-          <h1 className="text-5xl/tight font-bold mb-6 text-white">
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
             Hi, I'm Harel Surya Darma
           </h1>
-          <p className="text-base/loose mb-8 text-gray-400 lg:w-[90%]">
+
+          <p className="text-base leading-8 mb-8 text-gray-400 lg:w-[90%]">
             Informatics Engineering Student passionate about building web
             applications using Laravel and exploring AI through Machine Learning
             & NLP.
           </p>
-          <div className="flex items-center sm:gap-4 gap-3 flex-wrap">
+
+          <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
             <a
               href="#projects"
               className="
-              bg-violet-700 
-              px-8 py-3.5 
-              rounded-full 
-              text-white font-semibold
-              transition-all duration-300 ease-out
-              hover:bg-violet-600 
-              hover:-translate-y-1 
-              hover:shadow-[0_10px_20px_rgba(109,40,217,0.4)]
-              active:translate-y-0 active:shadow-md"
+        bg-violet-700
+        px-8
+        py-3.5
+        rounded-full
+        text-white
+        font-semibold
+        transition-all
+        duration-300
+        ease-out
+        hover:bg-violet-600
+        hover:-translate-y-1
+        hover:shadow-[0_10px_20px_rgba(109,40,217,0.4)]
+        active:translate-y-0
+        active:shadow-md
+        "
             >
               View Projects
             </a>
+
             <a
               href={cv}
               download="CV_HarelSuryaDarma.pdf"
-              className="px-6 py-3.5 
-              border border-white/20 
-              rounded-full 
-              text-white font-medium
-              flex items-center gap-2
-              transition-all duration-300 ease-out
-              hover:bg-white/10 
-              hover:border-white/40
-              hover:-translate-y-1 
-              hover:shadow-[0_10px_20px_rgba(255,255,255,0.05)]
-              active:translate-y-0 active:shadow-sm active:bg-white/5"
+              className="
+        px-6
+        py-3.5
+        border
+        border-white/20
+        rounded-full
+        text-white
+        font-medium
+        flex
+        items-center
+        gap-2
+        transition-all
+        duration-300
+        ease-out
+        hover:bg-white/10
+        hover:border-white/40
+        hover:-translate-y-1
+        hover:shadow-[0_10px_20px_rgba(255,255,255,0.05)]
+        active:translate-y-0
+        active:shadow-sm
+        active:bg-white/5
+        "
             >
               Download CV
               <svg
@@ -78,25 +99,50 @@ function App() {
           </div>
         </div>
 
-        <div className="relative md:ml-auto mt-10 md:mt-0">
-          <div className="absolute inset-0 bg-purple-600/20 blur-[100px] rounded-full scale-75 transition-all duration-500 group-hover:bg-purple-500/30 group-hover:scale-90" />
+        {/* RIGHT */}
+        <div className="relative flex justify-center md:justify-end mt-10 md:mt-0">
+          <div
+            className="
+      absolute
+      inset-0
+      bg-purple-600/20
+      blur-[100px]
+      rounded-full
+      scale-75
+      transition-all
+      duration-500
+      group-hover:bg-purple-500/30
+      group-hover:scale-90
+      "
+          />
           <img
             src={DataImage.Profil}
             alt="Profile"
             loading="lazy"
             className="
-            relative
-            w-11/12
-            md:w-full
-            max-w-[460px]
-            mx-auto md:mx-0
-            rounded-[28px]
-            border border-white/10
-            shadow-[0_20px_50px_rgba(168,85,247,0.15)] 
-            hover:shadow-[0_20px_50px_rgba(168,85,247,0.3)]
-            transition-shadow duration-500 ease-in-out
-            animate__animated animate__fadeInUp animate__delay-2s
-            "
+      relative
+
+      w-full
+      max-w-[320px]
+      sm:max-w-[380px]
+      md:max-w-[420px]
+      lg:max-w-[460px]
+
+      rounded-[28px]
+      border
+      border-white/10
+
+      shadow-[0_20px_50px_rgba(168,85,247,0.15)]
+      hover:shadow-[0_20px_50px_rgba(168,85,247,0.3)]
+
+      transition-shadow
+      duration-500
+      ease-in-out
+
+      animate__animated
+      animate__fadeInUp
+      animate__delay-2s
+      "
           />
         </div>
       </div>
