@@ -173,7 +173,7 @@ function App() {
           </p>
           <div className="flex flex-wrap items-center gap-12 md:gap-20 border-t border-white/10 pt-8 mt-8">
             <div>
-              <h1 className="text-5xl font-bold mb-2 text-white">8</h1>
+              <h1 className="text-5xl font-bold mb-2 text-white">10+</h1>
               <p className="text-gray-400 font-medium tracking-wide">
                 Certificates
               </p>
