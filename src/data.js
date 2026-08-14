@@ -31,7 +31,7 @@ export const listTools = [
     gambar: Tools1,
     nama: "Visual Studio Code",
     ket: "Code Editor",
-    dad: "1500",
+    dad: "100",
     kategori: "tools",
   },
   {
@@ -47,7 +47,7 @@ export const listTools = [
     gambar: Tools3,
     nama: "Laravel",
     ket: "Framework",
-    dad: "200",
+    dad: "100",
     kategori: "web",
   },
   {
@@ -55,7 +55,7 @@ export const listTools = [
     gambar: Tools4,
     nama: "CSS",
     ket: "Language",
-    dad: "300",
+    dad: "100",
     kategori: "web",
   },
   {
@@ -63,7 +63,7 @@ export const listTools = [
     gambar: Tools5,
     nama: "Html",
     ket: "Language",
-    dad: "400",
+    dad: "100",
     kategori: "web",
   },
   {
@@ -71,7 +71,7 @@ export const listTools = [
     gambar: Tools6,
     nama: "Javascript",
     ket: "Language",
-    dad: "500",
+    dad: "100",
     kategori: "web",
   },
   {
@@ -79,7 +79,7 @@ export const listTools = [
     gambar: Tools7,
     nama: "Python",
     ket: "Language",
-    dad: "1100",
+    dad: "100",
     kategori: "data",
   },
   {
@@ -87,7 +87,7 @@ export const listTools = [
     gambar: Tools8,
     nama: "GitHub",
     ket: "Repository",
-    dad: "1600",
+    dad: "100",
     kategori: "tools",
   },
   {
@@ -95,7 +95,7 @@ export const listTools = [
     gambar: Tools9,
     nama: "MySql",
     ket: "Database",
-    dad: "600",
+    dad: "100",
     kategori: "web",
   },
   {
@@ -103,7 +103,7 @@ export const listTools = [
     gambar: Tools10,
     nama: "Google Colab",
     ket: "Code Editor",
-    dad: "1700",
+    dad: "100",
     kategori: "tools",
   },
   {
@@ -111,7 +111,7 @@ export const listTools = [
     gambar: Tools11,
     nama: "Filament",
     ket: "Framework",
-    dad: "700",
+    dad: "100",
     kategori: "web",
   },
   {
@@ -119,7 +119,7 @@ export const listTools = [
     gambar: Tools12,
     nama: "Php",
     ket: "Language",
-    dad: "800",
+    dad: "100",
     kategori: "web",
   },
   {
@@ -127,7 +127,7 @@ export const listTools = [
     gambar: Tools13,
     nama: "Jupyter",
     ket: "Code Editor",
-    dad: "1800",
+    dad: "100",
     kategori: "tools",
   },
   {
@@ -135,7 +135,7 @@ export const listTools = [
     gambar: Tools14,
     nama: "Pandas",
     ket: "Library",
-    dad: "1200",
+    dad: "100",
     kategori: "data",
   },
   {
@@ -143,7 +143,7 @@ export const listTools = [
     gambar: Tools15,
     nama: "PyTorch",
     ket: "Library",
-    dad: "1300",
+    dad: "100",
     kategori: "data",
   },
   {
@@ -151,7 +151,7 @@ export const listTools = [
     gambar: Tools16,
     nama: "Scikit-Learn",
     ket: "Library",
-    dad: "1400",
+    dad: "100",
     kategori: "data",
   },
   {
@@ -159,7 +159,7 @@ export const listTools = [
     gambar: Tools17,
     nama: "Midtrans",
     ket: "Library",
-    dad: "900",
+    dad: "100",
     kategori: "web",
   },
   {
@@ -167,7 +167,7 @@ export const listTools = [
     gambar: Tools18,
     nama: "Tailwind CSS",
     ket: "Library",
-    dad: "1000",
+    dad: "100",
     kategori: "web",
   },
 ];
@@ -272,9 +272,13 @@ import Sertif7 from "/assets/certificates/Introduction to Generative AI.jpg";
 import Sertif8 from "/assets/certificates/Memulai Pemrograman dengan Python.jpg";
 import Sertif8_2 from "/assets/certificates/Memulai Pemrograman dengan Python_p2.jpg";
 import Sertif8_3 from "/assets/certificates/Memulai Pemrograman dengan Python.jpg";
-import Sertif9 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0001.jpg"
-import Sertif9_2 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0002.jpg"
-import Sertif9_3 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0003.jpg"
+import Sertif9 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0001.jpg";
+import Sertif9_2 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0002.jpg";
+import Sertif9_3 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0003.jpg";
+import Sertif10 from "/assets/certificates/Belajar Machine Learning untuk Pemula.jpg";
+import Sertif10_2 from "/assets/certificates/Belajar Machine Learning untuk Pemula_p2.jpg";
+import Sertif10_3 from "/assets/certificates/Belajar Machine Learning untuk Pemula_p3.jpg";
+import Sertif11 from "/assets/certificates/Sertifikat AWS AI Academy - Harel Surya Darma.png";
 
 export const listSertif = [
   {
@@ -293,7 +297,7 @@ export const listSertif = [
     halaman: [Sertif2],
     penerbit: "BuildWithAngga",
     skills: ["Laravel 11", "Filament", "MySQL"],
-    dad: "200",
+    dad: "100",
   },
   {
     id: 3,
@@ -302,7 +306,7 @@ export const listSertif = [
     halaman: [Sertif8, Sertif8_2, Sertif8_3],
     penerbit: "Dicoding Academy",
     skills: ["Python", "Jupyter", "Google Colab"],
-    dad: "300",
+    dad: "100",
   },
   {
     id: 4,
@@ -311,7 +315,7 @@ export const listSertif = [
     halaman: [Sertif4, Sertif4_2],
     penerbit: "Dicoding Academy",
     skills: ["Machine Learning", "Deep Learning"],
-    dad: "400",
+    dad: "100",
   },
   {
     id: 5,
@@ -320,7 +324,7 @@ export const listSertif = [
     halaman: [Sertif5, Sertif5_2, Sertif5_3],
     penerbit: "Dicoding Academy",
     skills: ["AWS Cloud", "Generative AI", "Networking"],
-    dad: "500",
+    dad: "100",
   },
   {
     id: 6,
@@ -329,7 +333,7 @@ export const listSertif = [
     halaman: [Sertif7],
     penerbit: "IBM SkillsBuild",
     skills: ["Generative AI", "LLM"],
-    dad: "600",
+    dad: "100",
   },
   {
     id: 7,
@@ -338,7 +342,7 @@ export const listSertif = [
     halaman: [Sertif6],
     penerbit: "IBM SkillsBuild",
     skills: ["Artificial Intelligence"],
-    dad: "700",
+    dad: "100",
   },
   {
     id: 8,
@@ -347,7 +351,7 @@ export const listSertif = [
     nama: "AI Ethics",
     penerbit: "IBM SkillsBuild",
     skills: ["AI Ethics", "Compliance"],
-    dad: "800",
+    dad: "100",
   },
   {
     id: 9,
@@ -356,6 +360,24 @@ export const listSertif = [
     nama: "Spec Driven Development dengan Kiro",
     penerbit: "DiCoding",
     skills: ["Prompt Engineering", "Web Development", "Spec-Driven Development (SDD)"],
-    dad: "900",
+    dad: "100",
+  },
+  {
+    id: 10,
+    gambar: Sertif10,
+    halaman: [Sertif10, Sertif10_2, Sertif10_3],
+    nama: "Belajar Machine Learning untuk Pemula",
+    penerbit: "DiCoding",
+    skills: ["Machine Learning", "AI"],
+    dad: "100",
+  },
+  {
+    id: 11,
+    gambar: Sertif11,
+    halaman: [Sertif11],
+    nama: "Belajar Machine Learning untuk Pemula",
+    penerbit: "DiCoding",
+    skills: ["Machine Learning", "AI"],
+    dad: "100",
   },
 ];
