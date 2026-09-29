@@ -375,7 +375,7 @@ export const listSertif = [
     id: 11,
     gambar: Sertif11,
     halaman: [Sertif11],
-    nama: "Belajar Machine Learning untuk Pemula",
+    nama: "AWS AI Academy 2026 – Basic & Beginner",
     penerbit: "DiCoding",
     skills: ["Machine Learning", "AI"],
     dad: "100",
