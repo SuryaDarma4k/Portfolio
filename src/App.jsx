@@ -10,6 +10,8 @@ function App() {
   const [selectedProyek, setSelectedProyek] = useState(null);
   const [showAll, setShowAll] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formError, setFormError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [activeToolTab, setActiveToolTab] = useState("all");
 
   const displayedSertif = showAll ? listSertif : listSertif.slice(0, 8);
@@ -21,25 +23,60 @@ function App() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+
     const form = e.target;
-    const formData = new FormData(form);
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) return;
+
+    setIsSubmitting(true);
+    setFormSubmitted(false);
+    setFormError(false);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/suryadarma4k@gmail.com", {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
+      const response = await fetch(
+        "https://formsubmit.co/ajax/d0ba8853256cc06863df7cb5a3eb2f6b",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            _replyto: email,
+            message,
+            _subject: `New Portfolio Message from ${name}`,
+            _template: "table",
+            _captcha: "false",
+          }),
+        }
+      );
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         setFormSubmitted(true);
         form.reset();
-        setTimeout(() => setFormSubmitted(false), 5000);
+
+        setTimeout(() => {
+          setFormSubmitted(false);
+        }, 6000);
       } else {
-        alert("There was a problem sending your message. Please reach out via WhatsApp or email directly.");
+        throw new Error(data.message || "Failed to send message");
       }
-    } catch {
-      alert("Message could not be sent. Please contact via WhatsApp or email directly.");
+    } catch (error) {
+      console.error("FormSubmit Error:", error);
+      setFormError(true);
+
+      setTimeout(() => {
+        setFormError(false);
+      }, 6000);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -392,11 +429,10 @@ function App() {
               <button
                 key={tab.id}
                 onClick={() => setActiveToolTab(tab.id)}
-                className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300 cursor-pointer ${
-                  activeToolTab === tab.id
-                    ? `${tab.activeBg} text-white font-semibold`
-                    : "bg-[#131417] text-zinc-400 border border-white/10 hover:text-white hover:border-white/30"
-                }`}
+                className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300 cursor-pointer ${activeToolTab === tab.id
+                  ? `${tab.activeBg} text-white font-semibold`
+                  : "bg-[#131417] text-zinc-400 border border-white/10 hover:text-white hover:border-white/30"
+                  }`}
               >
                 {tab.label}
               </button>
@@ -473,9 +509,8 @@ function App() {
                   <img
                     src={proyek.gambar}
                     alt={proyek.nama}
-                    className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${
-                      proyek.id === 2 ? "object-contain py-2 bg-[#121212]" : "object-cover"
-                    }`}
+                    className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${proyek.id === 2 ? "object-contain py-2 bg-[#121212]" : "object-cover"
+                      }`}
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
@@ -503,8 +538,8 @@ function App() {
                       {proyek.id === 1
                         ? "System"
                         : proyek.id === 2
-                        ? "Mobile-First"
-                        : "Portfolio"}
+                          ? "Mobile-First"
+                          : "Portfolio"}
                     </span>
                   </div>
 
@@ -702,9 +737,8 @@ function App() {
             >
               <span>{showAll ? "Show Less" : "View All Certifications"}</span>
               <svg
-                className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                  showAll ? "rotate-180" : ""
-                }`}
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${showAll ? "rotate-180" : ""
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -814,59 +848,210 @@ function App() {
           </div>
 
           {/* Right Column: Contact Form with Focused Glow */}
-          <div className="bg-[#131417] border border-white/10 rounded-3xl p-6 sm:p-7 shadow-lg">
-            <form onSubmit={handleFormSubmit} className="space-y-3.5">
-              <div>
-                <label className="block text-[11px] uppercase tracking-wider text-zinc-400 mb-1.5 font-medium">
-                  Your Name
+          <div className="bg-[#111214] border border-white/10 rounded-3xl p-6 sm:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.25)]">
+            <form onSubmit={handleFormSubmit} className="space-y-5">
+
+              {/* Name */}
+              <div className="space-y-2">
+                <label
+                  htmlFor="name"
+                  className="block text-xs font-medium text-zinc-400"
+                >
+                  Name
                 </label>
+
                 <input
+                  id="name"
                   type="text"
                   name="name"
                   required
-                  placeholder="John Doe"
-                  className="w-full px-3.5 py-2.5 bg-[#0a0a0c] text-white border border-white/10 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500/30 text-xs sm:text-sm transition-all"
+                  autoComplete="name"
+                  placeholder="Your name"
+                  className="
+        w-full
+        px-4 py-3
+        bg-[#0a0a0c]
+        text-sm text-white
+        placeholder:text-zinc-600
+        border border-white/10
+        rounded-xl
+        outline-none
+        transition-all duration-200
+        focus:border-sky-500/70
+        focus:ring-2 focus:ring-sky-500/10
+        hover:border-white/20
+      "
                 />
               </div>
 
-              <div>
-                <label className="block text-[11px] uppercase tracking-wider text-zinc-400 mb-1.5 font-medium">
-                  Your Email
+              {/* Email */}
+              <div className="space-y-2">
+                <label
+                  htmlFor="email"
+                  className="block text-xs font-medium text-zinc-400"
+                >
+                  Email
                 </label>
+
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   required
-                  placeholder="john@example.com"
-                  className="w-full px-3.5 py-2.5 bg-[#0a0a0c] text-white border border-white/10 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500/30 text-xs sm:text-sm transition-all"
+                  autoComplete="email"
+                  placeholder="you@example.com"
+                  className="
+        w-full
+        px-4 py-3
+        bg-[#0a0a0c]
+        text-sm text-white
+        placeholder:text-zinc-600
+        border border-white/10
+        rounded-xl
+        outline-none
+        transition-all duration-200
+        focus:border-sky-500/70
+        focus:ring-2 focus:ring-sky-500/10
+        hover:border-white/20
+      "
                 />
               </div>
 
-              <div>
-                <label className="block text-[11px] uppercase tracking-wider text-zinc-400 mb-1.5 font-medium">
+              {/* Message */}
+              <div className="space-y-2">
+                <label
+                  htmlFor="message"
+                  className="block text-xs font-medium text-zinc-400"
+                >
                   Message
                 </label>
+
                 <textarea
+                  id="message"
                   name="message"
-                  rows="4"
+                  rows="5"
                   required
-                  placeholder="Write your message here..."
-                  className="w-full px-3.5 py-2.5 bg-[#0a0a0c] text-white border border-white/10 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500/30 text-xs sm:text-sm transition-all resize-none"
-                ></textarea>
+                  placeholder="Tell me about your project or opportunity..."
+                  className="
+        w-full
+        px-4 py-3
+        bg-[#0a0a0c]
+        text-sm text-white
+        placeholder:text-zinc-600
+        border border-white/10
+        rounded-xl
+        outline-none
+        resize-none
+        transition-all duration-200
+        focus:border-sky-500/70
+        focus:ring-2 focus:ring-sky-500/10
+        hover:border-white/20
+      "
+                />
               </div>
 
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-3 px-5 rounded-xl font-semibold text-xs sm:text-sm text-slate-950 bg-sky-500 hover:bg-sky-400 transition-all duration-300 shadow-[0_4px_20px_rgba(56,189,248,0.25)] hover:shadow-[0_6px_25px_rgba(56,189,248,0.45)] hover:-translate-y-0.5 cursor-pointer"
+                disabled={isSubmitting}
+                className="
+      w-full
+      flex items-center justify-center gap-2
+      px-4 py-3
+      rounded-xl
+      bg-sky-500
+      hover:bg-sky-400
+      disabled:bg-sky-500/50
+      disabled:cursor-not-allowed
+      text-sm font-semibold text-white
+      shadow-[0_8px_25px_rgba(14,165,233,0.15)]
+      hover:shadow-[0_8px_30px_rgba(14,165,233,0.25)]
+      transition-all duration-200
+      hover:-translate-y-0.5
+    "
               >
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <svg
+                      className="w-4 h-4 animate-spin"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                      />
+                    </svg>
+
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 12h14M13 6l6 6-6 6"
+                      />
+                    </svg>
+                  </>
+                )}
               </button>
 
+              {/* Success Message */}
               {formSubmitted && (
-                <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-center text-xs text-emerald-300">
-                  ✅ Thank you! Your message has been sent successfully.
+                <div
+                  className="
+                  flex items-center gap-2
+                  p-3
+                  rounded-xl
+                  bg-emerald-500/10
+                  border border-emerald-500/20
+                  text-xs text-emerald-300
+      "
+                >
+                  <span>✓</span>
+                  <span>
+                    Message sent successfully. Thanks for reaching out!
+                  </span>
                 </div>
               )}
+
+              {/* Error Message */}
+              {formError && (
+                <div
+                  className="
+                  flex items-center gap-2
+                  p-3
+                  rounded-xl
+                  bg-red-500/10
+                  border border-red-500/20
+                  text-xs text-red-300
+      "
+                >
+                  <span>!</span>
+                  <span>
+                    Something went wrong. Please try again later.
+                  </span>
+                </div>
+              )}
+
             </form>
           </div>
         </div>
@@ -923,11 +1108,10 @@ function App() {
                     key={index}
                     src={imgSrc}
                     alt={`${selectedProyek.nama} screenshot ${index + 1}`}
-                    className={`object-contain rounded-xl shadow-xl border border-white/10 ${
-                      selectedProyek.id === 2
-                        ? "h-[70vh] w-auto mx-auto"
-                        : "w-full h-auto max-w-4xl"
-                    }`}
+                    className={`object-contain rounded-xl shadow-xl border border-white/10 ${selectedProyek.id === 2
+                      ? "h-[70vh] w-auto mx-auto"
+                      : "w-full h-auto max-w-4xl"
+                      }`}
                   />
                 ))
               ) : (
