@@ -24,6 +24,12 @@ import Tools15 from "/assets/tools/pytorch.png";
 import Tools16 from "/assets/tools/scikitlearn.png";
 import Tools17 from "/assets/tools/midtrans.png";
 import Tools18 from "/assets/tools/tailwind.png";
+import Tools19 from "/assets/tools/keras.png";
+import Tools20 from "/assets/tools/matplotlib.webp";
+import Tools21 from "/assets/tools/numpy.png";
+import Tools22 from "/assets/tools/plotly.jpeg";
+import Tools23 from "/assets/tools/scipy.svg";
+import Tools24 from "/assets/tools/tensorflow.png";
 
 export const listTools = [
   {
@@ -169,6 +175,48 @@ export const listTools = [
     ket: "Library",
     dad: "100",
     kategori: "web",
+  },{
+    id: 19,
+    gambar: Tools19,
+    nama: ".Keras",
+    ket: "Library",
+    dad: "100",
+    kategori: "data",
+  },{
+    id: 20,
+    gambar: Tools20,
+    nama: "Matplotlib",
+    ket: "Library",
+    dad: "100",
+    kategori: "data",
+  },{
+    id: 21,
+    gambar: Tools21,
+    nama: "Numpy",
+    ket: "Library",
+    dad: "100",
+    kategori: "data",
+  },{
+    id: 22,
+    gambar: Tools22,
+    nama: "Plotly",
+    ket: "Library",
+    dad: "100",
+    kategori: "data",
+  },{
+    id: 23,
+    gambar: Tools23,
+    nama: "Scipy",
+    ket: "Library",
+    dad: "100",
+    kategori: "data",
+  },{
+    id: 24,
+    gambar: Tools24,
+    nama: "TensorFlow",
+    ket: "Library",
+    dad: "100",
+    kategori: "data",
   },
 ];
 
@@ -271,7 +319,7 @@ import Sertif6 from "/assets/certificates/Introduction to Artificial Intelligenc
 import Sertif7 from "/assets/certificates/Introduction to Generative AI.jpg";
 import Sertif8 from "/assets/certificates/Memulai Pemrograman dengan Python.jpg";
 import Sertif8_2 from "/assets/certificates/Memulai Pemrograman dengan Python_p2.jpg";
-import Sertif8_3 from "/assets/certificates/Memulai Pemrograman dengan Python.jpg";
+import Sertif8_3 from "/assets/certificates/Memulai Pemrograman dengan Python_p3.jpg";
 import Sertif9 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0001.jpg";
 import Sertif9_2 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0002.jpg";
 import Sertif9_3 from "/assets/certificates/Spec-Driven Development dengan Kiro_page-0003.jpg";
